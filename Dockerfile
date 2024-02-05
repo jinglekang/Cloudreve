@@ -11,7 +11,7 @@ RUN apk update \
     && mkdir -p /data/aria2 \
     && chmod -R 766 /data/aria2
 
-EXPOSE 5212
+EXPOSE 5200
 VOLUME ["/cloudreve/uploads", "/cloudreve/avatar", "/data"]
 
 ENTRYPOINT ["./cloudreve"]

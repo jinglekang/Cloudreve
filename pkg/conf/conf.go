@@ -74,7 +74,7 @@ var cfg *ini.File
 const defaultConf = `[System]
 Debug = false
 Mode = master
-Listen = :5212
+Listen = :5200
 SessionSecret = {SessionSecret}
 HashIDSalt = {HashIDSalt}
 `

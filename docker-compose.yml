@@ -14,7 +14,7 @@ services:
     image: cloudreve/cloudreve:latest
     restart: unless-stopped
     ports:
-      - "5212:5212"
+      - "5200:5200"
     volumes:
       - temp_data:/data
       - ./cloudreve/uploads:/cloudreve/uploads
