@@ -15,6 +15,8 @@ zip -r - assets/build >assets.zip
 # 获得当前版本号、Commit
 export COMMIT_SHA=$(git rev-parse --short HEAD)
 # export VERSION=$(git describe --tags)
+# 禁用CGO
+go env -w CGO_ENABLED=0
 # 开始编译
 # go build -a -o cloudreve -ldflags " -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.BackendVersion=$VERSION' -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.LastCommit=$COMMIT_SHA'"
 go build -a -o cloudreve -ldflags " -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.LastCommit=$COMMIT_SHA'"
