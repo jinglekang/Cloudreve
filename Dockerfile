@@ -7,7 +7,7 @@ COPY cloudreve ./cloudreve
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
 RUN apk update \
-    && apk add --no-cache tzdata \
+    && apk add --no-cache tzdata mailcap\
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && chmod +x ./cloudreve \
