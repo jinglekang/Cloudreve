@@ -7,4 +7,4 @@ docker stop cloudreve
 # 删除老容器
 docker rm cloudreve
 # 启动服务
-docker run -d --name cloudreve -p 5200:5200 -v /home/main/data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db -v cloudreve_avatar:/cloudreve/avatar -v cloudreve_uploads:/cloudreve/uploads -v cloudreve_data:/data --restart unless-stopped cloudreve:latest
+docker run -d --name cloudreve -p 5200:5200 -v /root/docker/cloudreve/cloudreve.db:/cloudreve/cloudreve.db -v /root/docker/cloudreve/avatar:/cloudreve/avatar -v /root/cloudreve/uploads:/cloudreve/uploads -v /root/docker/cloudreve/data:/data --restart unless-stopped cloudreve:latest
